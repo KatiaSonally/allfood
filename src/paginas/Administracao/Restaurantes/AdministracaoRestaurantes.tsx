@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 import IRestaurante from "../../../interfaces/IRestaurante"
 import { Button, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material"
-import { Link } from "react-router-dom"
 import http from "../../../http"
+import { Link as RouterLink } from 'react-router-dom'
 
 const AdministracaoRestaurantes = () => {
 
@@ -15,10 +15,10 @@ const AdministracaoRestaurantes = () => {
 
     const excluir = (restauranteAhSerExcluido: IRestaurante) => {
         http.delete(`restaurantes/${restauranteAhSerExcluido.id}/`)
-        .then(() => {
-            const listaRestaurante = restaurantes.filter(restaurante => restaurante.id !== restauranteAhSerExcluido.id)
-            setRestaurantes([ ...listaRestaurante ])
-        })
+            .then(() => {
+                const listaRestaurante = restaurantes.filter(restaurante => restaurante.id !== restauranteAhSerExcluido.id)
+                setRestaurantes([...listaRestaurante])
+            })
     }
 
     return (
@@ -43,7 +43,7 @@ const AdministracaoRestaurantes = () => {
                             {restaurante.nome}
                         </TableCell>
                         <TableCell>
-                            [ <Link to={`/admin/restaurantes/${restaurante.id}`}>editar</Link> ]
+                            [ <RouterLink to={`/admin/restaurantes/${restaurante.id}`}>editar</RouterLink> ]
                         </TableCell>
                         <TableCell>
                             <Button variant="outlined" color="error" onClick={() => excluir(restaurante)}>
@@ -55,9 +55,7 @@ const AdministracaoRestaurantes = () => {
                 </TableBody>
             </Table>
         </TableContainer>
-
     )
-
 }
 
 export default AdministracaoRestaurantes
