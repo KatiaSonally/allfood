@@ -9,6 +9,12 @@ O Alfood é um site que lista restaurantes e pratos do menu.
 ## 🔨 Funcionalidades do projeto
 
 O Alfood começa com uma listagem estática de seu conteúdo e é esse o problema a resolver: vamos implementar toda a camada de comunicação com a API.
+- Desenvolver a comunicação entre uma aplicação React e uma API REST
+- Implementar hooks para buscar dados em uma API
+- Utilizar o axios para realizar requisições HTTP
+- Avaliar as informações da resposta da API
+- Integrar o frontend ao backend
+- Descrever o funcionamento de uma API a partir do Swagger
 
 ## ✔️ Técnicas e tecnologias utilizadas
 
