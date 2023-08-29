@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
 import { Button, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material"
 import http from "../../../http"
-import { Link as RouterLink } from 'react-router-dom'
 import IPrato from "../../../interfaces/IPrato"
-import AdministracaoRestaurantes from "../Restaurantes/AdministracaoRestaurantes"
+
+import { Link as RouterLink } from 'react-router-dom'
 
 const AdministracaoPratos = () => {
 
@@ -51,11 +51,12 @@ const AdministracaoPratos = () => {
                         </TableCell>
                         <TableCell>
                             {prato.tag}
-                        </TableCell><TableCell>
-                            [<a href={prato.imagem} target="_blank">ver imagem</a>]
                         </TableCell>
                         <TableCell>
-                            [ <RouterLink to={`/admin/prato/${prato.id}`}>editar</RouterLink> ]
+                            [<a href={prato.imagem} target="_blank" rel="noreferrer">ver imagem</a>]
+                        </TableCell>
+                        <TableCell>
+                            [ <RouterLink to={`/admin/pratos/${prato.id}`}>editar</RouterLink> ]
                         </TableCell>
                         <TableCell>
                             <Button variant="outlined" color="error" onClick={() => excluir(prato)}>
@@ -63,7 +64,6 @@ const AdministracaoPratos = () => {
                             </Button>
                         </TableCell>
                     </TableRow>)}
-
                 </TableBody>
             </Table>
         </TableContainer>
