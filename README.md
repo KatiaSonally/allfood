@@ -25,6 +25,6 @@ O Alfood começa com uma listagem estática de seu conteúdo e é esse o problem
 
 ## 🛠️ Abrir e rodar o projeto
 
-Para abrir e rodar o projeto, execute npm i para instalar as dependências e npm start para inicar o projeto.
-
-Depois, acesse <a href="http://localhost:3000/">http://localhost:3000/</a> no seu navegador.
+Vamos usar a ferramenta Docker e:
+- Abrir a API no terminal e rodar docker build, em seguida docker compose up e em seguida abrir a API no localhost:8000
+- Abrir a página da aplicação e acessar a administração no endpoint /admin/restaurantes
